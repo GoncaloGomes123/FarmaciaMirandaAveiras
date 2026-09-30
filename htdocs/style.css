@@ -1,0 +1,682 @@
+/* Definição de Cores Personalizadas */
+:root {
+    --green-primary: #15654c; /* Verde escuro do Menu */
+    --green-secondary: #4caf50; /* Verde do ícone do logotipo */
+    --light-gray-bg: #f8f9fa; /* Fundo claro do menu de navegação */
+}
+
+/* Smooth in-page navigation */
+html { scroll-behavior: smooth; }
+
+/* 1. Secção do Logotipo e Nome da Marca */
+.logo-section {
+    /* Ajusta a secção para que o ícone fique centralizado verticalmente */
+    align-items: center;
+}
+
+.logo-section img {
+    /* Exemplo: Substitua com o caminho real do seu ícone */
+    border: 1px solid var(--green-secondary); 
+    border-radius: 5px;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    line-height: 1; /* Ajusta a altura da linha para juntar as duas palavras */
+}
+
+.logo-text-secondary {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--green-primary) !important; /* Força o verde principal */
+}
+
+/* Estilo da Imagem do Serviço */
+.service-img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .service-img { max-height: 240px; }
+}
+
+/* Centra imagem no card */
+.service-card > .card > .row > .col-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* 5. Estilo do Card de Serviços */
+#servicesList .service-card {
+    display: flex;
+    align-items: stretch;
+}
+#servicesList .service-card .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    height: 100%;
+}
+#servicesList .service-card .card .row {
+    flex: 1;
+    min-height: inherit;
+}
+#servicesList .service-card .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#servicesList .service-card .card .col-4,
+#servicesList .service-card .card .col-8 {
+    display: flex;
+    align-items: center;
+}
+#servicesList .service-card .card .col-8 {
+    justify-content: center;
+}
+.service-card .card {
+    border: 0;
+    border-radius: .85rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+    overflow: hidden;
+}
+.service-card .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+.service-card .card-body { padding: 1rem; }
+.service-card .card-title { font-size: 1.3rem; margin-bottom: .5rem; }
+.service-card .card-text { font-size: 1.05rem; color: #333; }
+.service-card { margin-bottom: 1.25rem; }
+
+.services-hero h1 {
+    color: var(--green-primary);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.services-hero p { font-size: 1rem; }
+
+/* 2. Barra de Pesquisa */
+.search-input-group {
+    /* Torna a barra de pesquisa maior e com os cantos arredondados, como na imagem */
+    border-radius: 50px;
+    overflow: hidden; /* Garante que tudo dentro tenha o mesmo raio */
+    background-color: #e9ecef; /* Fundo cinzento claro, como na imagem */
+    border: 1px solid #ced4da; /* Borda leve */
+}
+
+.custom-search-input {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.search-button {
+    /* Botão de pesquisa transparente/cinzento no fundo */
+    background-color: transparent !important;
+    border: none !important;
+    color: #6c757d !important;
+}
+
+/* 3. Ícones de Conta/Serviços */
+.icon-item {
+    font-size: 0.75rem; /* Letra pequena para as labels */
+    line-height: 1.1;
+}
+
+.icon-label {
+    margin-top: -3px; /* Aproxima o texto do ícone */
+}
+
+
+/* 4. Menu de Navegação Principal */
+
+.custom-navbar-menu {
+    background-color: var(--light-gray-bg); /* Fundo cinzento claro */
+}
+
+.btn-menu-custom {
+    /* Estilo do botão 'Menu' (verde escuro) */
+    background-color: var(--green-primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 0; /* Remove os cantos arredondados */
+    padding: 0.6rem 1.1rem;
+    font-size: 1.05rem;
+}
+
+.btn-menu-custom:hover {
+    background-color: #1a7a5a;
+    color: white;
+}
+
+.custom-navbar-menu .nav-link {
+    /* Estilo dos links de navegação */
+    color: #495057 !important;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* Carrossel largura máxima*/
+.carousel-full {
+    width: 100%;
+}
+.carousel-full .carousel-item {
+    height: 55vh; /* default responsive height */
+    min-height: 320px;
+}
+.carousel-full .carousel-item img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain; /* dimensiona a imagem para caber sem cortar */
+    object-position: center center;
+    margin: 0 auto;
+    background-color: #f8f9fa; /* fundo claro para preencher espaços */
+}
+
+@media (max-width: 576px) {
+    .carousel-full .carousel-item {
+        height: 40vh;
+        min-height: 220px;
+    }
+}
+@media (min-width: 992px) {
+    .carousel-full .carousel-item {
+        height: 72vh;
+        min-height: 420px;
+    }
+}
+
+/* indicadores visiveis no carrossel */
+.carousel-full .carousel-control-prev,
+.carousel-full .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.carousel-full .carousel-control-prev-icon,
+.carousel-full .carousel-control-next-icon {
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+    filter: invert(1) brightness(2);
+}
+
+.carousel-full .carousel-indicators {
+    z-index: 5;
+}
+.carousel-full .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+}
+.carousel-full .carousel-indicators .active {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+}
+
+/* Marcas em Destaque */
+.brands-section {
+    background-color: #ffffff;
+    padding: 1.5rem 0.25rem; /* aumentar espaço vertical */
+}
+.brands-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--green-primary);
+    font-size: 1.4rem;
+}
+.brands-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.brand-item {
+    flex: 1 1 16%;
+    min-width: 110px;
+    text-align: center;
+    padding: 0.35rem 0.6rem;
+    min-height: 140px; /* cria mais espaço vertical para as imagens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand-item img {
+    max-width: 100%;
+    max-height: 120px; /* aumentado para ocupar mais espaço vertical */
+    object-fit: contain;
+    transition: transform .18s ease, filter .18s ease, opacity .18s ease;
+}
+
+@media (max-width: 576px) {
+    .brand-item img { max-height: 90px; }
+    .brand-item { min-height: 120px; }
+}
+
+@media (min-width: 992px) {
+    .brand-item img { max-height: 140px; }
+    .brand-item { min-height: 180px; }
+}
+.brand-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Tendências do momento */
+.trending-section {
+    background-color: #f8f9fa;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-top: 2rem; /* empurra a secção Tendências para baixo */
+}
+.trending-title {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    color: var(--green-primary);
+    font-size: 1.6rem;
+}
+.trending-section .card {
+    border: 0;
+    box-shadow: 0 6px 18px rgba(23, 23, 23, 0.06);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.trending-section .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 26px rgba(23,23,23,0.12);
+}
+.trending-section .card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* For specific trending images that should show whole image without cropping */
+.trending-section .card-img-top.trending-img-contain {
+    object-fit: contain;
+    object-position: center center;
+    background-color: #ffffff;
+}
+
+/* Botão verde para os cards de tendências */
+.trending-section .btn-trend {
+    background-color: var(--green-primary);
+    border-color: var(--green-primary);
+    color: #fff;
+    font-weight: 600;
+    transition: background-color .12s ease, transform .12s ease;
+}
+.trending-section .btn-trend:hover,
+.trending-section .btn-trend:focus {
+    background-color: #12543f;
+    border-color: #12543f;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+@media (min-width: 992px) {
+    .trending-section .card-img-top {
+        height: 260px;
+    }
+}
+
+/* Horizontal carousel for trending cards */
+.trending-carousel {
+    position: relative;
+}
+.trending-track {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+.trending-track::-webkit-scrollbar { display: none; }
+.trending-card {
+    flex: 0 0 210px; /* half of previous 420px */
+    scroll-snap-align: start;
+}
+.trending-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.trending-prev { left: 12px; }
+.trending-next { right: 12px; }
+.trending-btn:hover { background: rgba(0,0,0,0.7); }
+
+@media (max-width: 576px) {
+    .trending-card { flex: 0 0 39%; } /* ~half of 78% */
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    .trending-card { flex: 0 0 30%; } /* ~half of 60% */
+}
+@media (min-width: 992px) {
+    .trending-card { flex: 0 0 23%; } /* ~half of 46% */
+}
+
+/* explicit left/right for prev/next above; no global left/right on .trending-btn */
+
+@media (max-width: 576px) {
+    .brand-item {
+        flex-basis: 45%;
+    }
+}
+
+/* Best Sellers: styles mirrored from trending, separate namespace */
+.bestsellers-section {
+    background-color: #ffffff;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-top: 2rem;
+}
+.bestsellers-title {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    color: var(--green-primary);
+    font-size: 1.6rem;
+}
+.bestsellers-section .card {
+    border: 0;
+    box-shadow: 0 6px 18px rgba(23, 23, 23, 0.06);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.bestsellers-section .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 26px rgba(23,23,23,0.12);
+}
+.bestsellers-section .card-img-top { height: 220px; object-fit: cover; }
+.bestsellers-section .btn-trend { background-color: var(--green-primary); border-color: var(--green-primary); color: #fff; font-weight: 600; }
+.bestsellers-section .btn-trend:hover, .bestsellers-section .btn-trend:focus { background-color: #12543f; border-color: #12543f; color: #fff; }
+
+.bestsellers-carousel { position: relative; }
+.bestsellers-track {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+.bestsellers-track::-webkit-scrollbar { display: none; }
+.bestsellers-card { flex: 0 0 210px; scroll-snap-align: start; }
+.bestsellers-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.bestsellers-prev { left: 12px; }
+.bestsellers-next { right: 12px; }
+.bestsellers-btn:hover { background: rgba(0,0,0,0.7); }
+
+@media (max-width: 576px) {
+    .bestsellers-card { flex: 0 0 39%; }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    .bestsellers-card { flex: 0 0 30%; }
+}
+@media (min-width: 992px) {
+    .bestsellers-card { flex: 0 0 23%; }
+}
+
+/* Global button style for any .btn-trend used outside section namespaces */
+.btn-trend {
+    background-color: var(--green-primary) !important;
+    border-color: var(--green-primary) !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+.btn-trend:hover,
+.btn-trend:focus {
+    background-color: #12543f !important;
+    border-color: #12543f !important;
+    color: #fff !important;
+}
+
+/* Apoio ao Cliente (mapa / contactos) */
+.support-section { background-color: #ffffff; padding-top: 2rem; padding-bottom: 2.5rem; }
+.support-title { text-align: center; margin-bottom: 1rem; font-weight: 700; color: var(--green-primary); font-size: 1.45rem; }
+.support-card { border: 0; box-shadow: 0 6px 18px rgba(23,23,23,0.06); padding: 1rem; }
+.support-card h5 { margin-bottom: .5rem; }
+.map-embed { width: 100%; height: 300px; border: 0; }
+
+@media (min-width: 992px) {
+    .map-embed { height: 360px; }
+}
+
+/* Generic helper to show full images without cropping */
+.card-img-top.img-contain {
+    object-fit: contain !important;
+    object-position: center center;
+    background-color: #ffffff;
+}
+
+/* =========================================
+   CORREÇÃO DEFINITIVA DE IMAGENS E CARROSSÉIS
+   ========================================= */
+
+/* 1. IMAGENS (A regra "Marreta") */
+/* Usamos seletores específicos e !important para garantir que nada corta as imagens */
+.card-img-top, 
+.trending-section .card-img-top, 
+.bestsellers-section .card-img-top,
+.trending-img-contain, 
+.img-contain {
+    width: 100%;             
+    height: 200px !important;       /* Força altura fixa de 200px */
+    object-fit: contain !important; /* OBRIGATÓRIO: Impede o corte da imagem */
+    padding: 15px;                  /* Espaço para a imagem respirar */
+    background-color: #fff;         /* Fundo branco para imagens transparentes */
+    border-radius: 5px 5px 0 0;
+}
+
+/* 2. ESTRUTURA DOS CARROSSÉIS (Horizontal) */
+/* Garante que o produtos ficam em linha na Home e na página Produtos */
+.trending-track, 
+.bestsellers-track {
+    display: flex !important;       /* Garante que ficam lado a lado */
+    gap: 20px;                      /* Espaço entre cartões */
+    overflow-x: auto;               /* Permite scroll */
+    scroll-behavior: smooth;
+    padding: 10px 5px 20px 5px;
+    width: 100%;
+}
+
+/* 3. TAMANHO DOS CARTÕES (Responsivo e sem cortes) */
+.trending-card, 
+.bestsellers-card {
+    flex: 0 0 auto !important;
+    /* Por defeito (telemóveis), mostra 1 cartão inteiro */
+    width: 100% !important;
+    max-width: none; 
+}
+
+/* Tablet (Ecrãs médios - mostra 2 cartões) */
+@media (min-width: 576px) {
+    .trending-card, .bestsellers-card {
+        /* (100% - 1 intervalo de 20px) / 2 itens */
+        width: calc((100% - 20px) / 2) !important;
+    }
+}
+
+/* Portáteis (Ecrãs grandes - mostra 4 cartões) */
+@media (min-width: 992px) {
+    .trending-card, .bestsellers-card {
+        /* (100% - 3 intervalos de 20px) / 4 itens */
+        width: calc((100% - 60px) / 4) !important;
+    }
+}
+
+/* Ecrãs Extra Grandes (Monitores PC - mostra 5 cartões, como na tua imagem) */
+@media (min-width: 1400px) {
+    .trending-card, .bestsellers-card {
+        /* (100% - 4 intervalos de 20px) / 5 itens */
+        width: calc((100% - 80px) / 5) !important;
+    }
+}
+
+/* 4. BARRA DE SCROLL MAIS BONITA */
+.trending-track::-webkit-scrollbar,
+.bestsellers-track::-webkit-scrollbar {
+    height: 8px;
+    display: block; /* Garante que a barra aparece se necessário */
+}
+
+.trending-track::-webkit-scrollbar-thumb,
+.bestsellers-track::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+/* =========================================
+   NOVA ESTILIZAÇÃO - PÁGINA DE SERVIÇOS
+   ========================================= */
+
+.service-card-modern {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    border-top: 4px solid var(--green-primary) !important;
+}
+
+.service-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(21, 101, 76, 0.15) !important;
+}
+
+.service-card-modern .card-title {
+    color: var(--green-primary);
+}
+
+.service-img-wrapper {
+    height: 220px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.service-img-top {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.service-card-modern:hover .service-img-top {
+    transform: scale(1.05);
+}
+
+.health-widget-section {
+    background-color: #ffffff;
+}
+
+.health-widget-card {
+    border-left: 6px solid var(--green-primary) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.health-widget-card:hover {
+    box-shadow: 0 12px 28px rgba(21, 101, 76, 0.12) !important;
+}
+
+@media (max-width: 768px) {
+    .health-widget-card .border-end {
+        border-right: none !important;
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+}
+
+/* =========================================
+   PÁGINA DA EQUIPA
+   ========================================= */
+
+.team-card-modern {
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent !important;
+}
+
+.team-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(21, 101, 76, 0.12) !important;
+    border-bottom: 4px solid var(--green-primary) !important; /* Linha verde aparece no fundo ao passar o rato */
+}
+
+.team-img-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--green-secondary) 0%, var(--green-primary) 100%);
+    transition: transform 0.3s ease;
+}
+
+.team-card-modern:hover .team-img-wrapper {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid white; /* Cria um contorno branco entre a foto e o anel verde */
+}
+
+.bg-success-subtle {
+    background-color: #e8f5e9 !important; /* Verde muito suave para as etiquetas de cargo */
+    font-size: 0.85rem;
+    font-weight: 600;
+}
